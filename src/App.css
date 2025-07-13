@@ -2,7 +2,7 @@
 
 .card{
   width: 200px;
-  height: 250px;
+  height: 350px;
   border: 2px solid black;
   background-color: bisque;
   text-align: center;
@@ -12,4 +12,13 @@
 .container{
   display: flex;
   flex-wrap: wrap;
+}
+
+.adhar{
+  width: 200px;
+  height: 350px;
+  border: 2px solid black;
+  background-color: bisque;
+  text-align: center;
+  margin: 5px;
 }

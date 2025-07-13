@@ -9,32 +9,30 @@ import Navbar from './Navbar'
 import About from './components/About'
 import {Routes,Route} from 'react-router-dom'
 import Error from './components/Error'
+import LiftingStateUp from './LiftingStateUp'
+import CallbackProps from './CallbackProps'
+import CounterProvider from './context/counterContext'
+import ConterController from './controllers/ConterController'
+import CounterDisplay from './controllers/CounterDisplay'
 function App() {
   return (
     <>
-      {/* <div className='container'>
-        <Card name="Amit" email="amitkm@gmail.com"/>
-        <Card name="Vidhi" email="vidhi@gmail.com"/>
-        <Card name="Amit" email="amitkm@gmail.com"/>
-        <Card name="Vidhi" email="vidhi@gmail.com"/>
-        <Card name="Amit" email="amitkm@gmail.com"/>
-        <Card name="Vidhi" email="vidhi@gmail.com"/>
-        <Card name="Amit" email="amitkm@gmail.com"/>
-        <Card name="Vidhi" email="vidhi@gmail.com"/>
-        <Card></Card>
-      </div> */}
-     {/* <Count></Count> */}
-     {/* <Form/> */}
-     {/* <FetchData/> */}
-     {/* <List/> */}
     <Navbar/>
      <Routes>
        <Route path='/' element={<Home/>}></Route>
        <Route path='/about' element={<About/>}/>
        <Route path='/form' element={<Form/>}></Route>
        <Route path='/count' element={<Count/>}/>
+       <Route path='/fetch' element={<FetchData/>}/>
        <Route path='*' element={<Error/>}/>
+       <Route path='/list' element={<List/>}/>
+       <Route path='/lift' element={<LiftingStateUp/>}/>
+       <Route path='/callback' element={<CallbackProps/>}/>
      </Routes>
+     <CounterProvider>
+       <CounterDisplay/>
+       <ConterController/>
+     </CounterProvider>
     </>
   )
 }

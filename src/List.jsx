@@ -6,11 +6,11 @@ export default function List() {
     return (
         <>
             <h1>Students list</h1>
-            <ol type='a'>
-                {students.map((n, index) => (
-                    <li key={index}>{n}</li>
-                ))}
-            </ol>
+            <ul>
+                {
+                    students.map((cur,index)=><li key={index}>{cur}</li>)
+                }
+            </ul>
         </>
     )
 }
