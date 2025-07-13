@@ -1,18 +1,25 @@
-
-
 import React, { useState } from 'react'
-
+import List from './List';
 export default function Form() {
      const[name,setName]=useState('');
      const[email,setEmail]=useState('');
      const[password,setPassword]=useState('')
      console.log(name)
+     const[user,setUser]=useState([])
+     console.log(user)
      const handleSubmit=(e)=>{
+       
         e.preventDefault();//prevent page reload
         if(name==''||email==''||password==''){
             console.log("please provide all fields");
             return
         } 
+        let newUser={
+            name:name,
+            email:email,
+            password:password
+        }
+        setUser([newUser,...user])
         alert(`Name: ${name}, Email: ${email}`)
         setName('')
         setEmail('')
@@ -46,9 +53,15 @@ export default function Form() {
                 <button type='submit'>Submit</button>
             </form>
 
-            <h1>Name:{name}</h1>
-            <h1>Email:{email}</h1>
-            <h1>Password:{password}</h1>
+            <table>
+                {user.map((cur,index)=>(
+                    <>
+                    <li>{cur.name}</li>
+                    <li>{cur.email}</li>
+                    <li>{cur.password}</li>
+                    </>
+                ))}
+            </table>
         </>
     )
 }

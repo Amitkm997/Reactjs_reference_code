@@ -13,7 +13,11 @@ useEffect(()=>{
 
 })
 
-// 1. we specified empty dependency array
+// 2. we specified empty dependency array
 useEffect(()=>{
 
+},[])
+
+useEffect(()=>{
+    //logic like api calls
 },[])
