@@ -14,6 +14,9 @@ import CallbackProps from './CallbackProps'
 import CounterProvider from './context/counterContext'
 import ConterController from './controllers/ConterController'
 import CounterDisplay from './controllers/CounterDisplay'
+import ThemeProvider from './ThemeSwitcher'
+import ThemeChange from './ThemeChange'
+import UseReducer from './UseReducer'
 function App() {
   return (
     <>
@@ -29,10 +32,14 @@ function App() {
        <Route path='/lift' element={<LiftingStateUp/>}/>
        <Route path='/callback' element={<CallbackProps/>}/>
      </Routes>
-     <CounterProvider>
+     {/* <CounterProvider>
        <CounterDisplay/>
        <ConterController/>
-     </CounterProvider>
+     </CounterProvider> */}
+     <ThemeProvider>
+      <ThemeChange/>
+     </ThemeProvider>
+     <UseReducer/>
     </>
   )
 }
