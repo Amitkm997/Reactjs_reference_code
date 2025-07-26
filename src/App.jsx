@@ -17,10 +17,18 @@ import CounterDisplay from './controllers/CounterDisplay'
 import ThemeProvider from './ThemeSwitcher'
 import ThemeChange from './ThemeChange'
 import UseReducer from './UseReducer'
+import useWindowWidth from './useWindowWidth'
+import CounterComponent from './components/CounterComponent'
 function App() {
+  // const width=useWindowWidth()
   return (
     <>
     <Navbar/>
+    {/* <CounterComponent/> */}
+    {/* <div>
+      <h1>Window width</h1>
+      <p>{width} px</p>
+    </div> */}
      <Routes>
        <Route path='/' element={<Home/>}></Route>
        <Route path='/about' element={<About/>}/>
