@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import List from './List';
+import { useNavigate } from 'react-router-dom';
 export default function Form() {
+     const navigate=useNavigate()
      const[name,setName]=useState('');
      const[email,setEmail]=useState('');
      const[password,setPassword]=useState('')
@@ -20,7 +22,9 @@ export default function Form() {
             password:password
         }
         setUser([newUser,...user])
-        alert(`Name: ${name}, Email: ${email}`)
+        // alert(`Name: ${name}, Email: ${email}`)
+        navigate('/fetch')
+
         setName('')
         setEmail('')
         setPassword('')
