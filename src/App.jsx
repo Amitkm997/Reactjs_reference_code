@@ -24,6 +24,7 @@ function App() {
   return (
     <>
     <Navbar/>
+    
     {/* <CounterComponent/> */}
     {/* <div>
       <h1>Window width</h1>
@@ -44,10 +45,10 @@ function App() {
        <CounterDisplay/>
        <ConterController/>
      </CounterProvider> */}
-     <ThemeProvider>
+     {/* <ThemeProvider>
       <ThemeChange/>
      </ThemeProvider>
-     <UseReducer/>
+     <UseReducer/> */}
     </>
   )
 }
